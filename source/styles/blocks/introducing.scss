@@ -1,0 +1,172 @@
+.introducing {
+  font-family: $secondary-font;
+}
+
+.introducing__container {
+  padding-bottom: 20px;
+}
+
+.introducing__wrapper {
+  background-color: $basic-green85;
+  text-align: center;
+  padding: 27px 20px 163px;
+  margin-bottom: 138px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: $basic-green url("../../images/index-background-mobile@1x.jpg") 50% no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 2dppx) {
+    &::after {
+      background-image: url("../../images/index-background-mobile@2x.jpg");
+    }
+  }
+}
+
+.introducing__title {
+  @include heading;
+  font-size: 36px;
+  line-height: 36px;
+  color: $white;
+  width: 250px;
+  margin: 0 auto 25px;
+}
+
+.introducing__text {
+  color: $white;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.introducing__image {
+  position: absolute;
+  bottom: -134px;
+  left: 50%;
+  margin-left: -140px;
+}
+
+.introducing__link {
+  @include basic-button;
+  display: block;
+  padding: 8px 0;
+  text-align: center;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .introducing__container {
+    padding: 140px 30px 527px;
+  }
+
+  .introducing__wrapper {
+    background-color: transparent;
+    padding: 0 90px;
+    margin: 0 0 50px;
+
+    &::before {
+      background-image: none;
+      background-color: unset;
+    }
+  }
+
+  .introducing__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: $black;
+    text-align: left;
+    margin-bottom: 40px;
+    width: unset;
+  }
+
+  .introducing__text {
+    font-size: 20px;
+    line-height: 20px;
+    color: $black;
+    text-align: left;
+  }
+
+  .introducing__image {
+    bottom: -630px;
+    left: 50%;
+    margin-left: -355px;
+    z-index: -1;
+  }
+
+  .introducing__link {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px 25px;
+    width: max-content;
+    margin: 0 0 0 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .introducing__container {
+    width: 50%;
+    padding: 225px 0 184px 110px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      background-color: $basic-green85;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      background: $basic-green url("../../images/index-background-desktop@1x.jpg") 50% no-repeat;
+      background-size: cover;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::after {
+        background-image: url("../../images/index-background-desktop@2x.jpg");
+      }
+    }
+  }
+
+  .introducing__text {
+    max-width: 400px;
+  }
+
+  .introducing__wrapper {
+    padding: 0;
+    width: 530px;
+    margin-left: auto;
+  }
+
+  .introducing__link {
+    padding: 14px 27px;
+    margin: 0 286px 0 auto;
+  }
+
+  .introducing__image {
+    top: -82px;
+    left: auto;
+    right: -391px;
+    z-index: 1;
+  }
+}

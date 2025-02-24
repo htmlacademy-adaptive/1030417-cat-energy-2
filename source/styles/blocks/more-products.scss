@@ -1,0 +1,70 @@
+.more-products {
+  font-size: 16px;
+  line-height: 20px;
+  border-top: 1px solid $darkD9;
+}
+
+.more-products__container {
+  padding: 78px 20px 24px;
+  text-align: center;
+  background: url("../../icons/stack.svg#plus") no-repeat;
+  background-size: 30px 30px;
+  background-position: center 25px;
+}
+
+.more-products__text {
+  @include heading;
+  color: $dark1;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.more-products__secondary-text {
+  color: $dark4;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 0 21px;
+}
+
+.more-products__button {
+  @include grey-button;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .more-products {
+    border: 2px solid $darkF2;
+  }
+
+  .more-products__container {
+    padding: 160px 37px 40px;
+    background-size: 60px 60px;
+    background-position-y: 50px;
+  }
+
+  .more-products__text {
+    font-size: 20px;
+    line-height: 24px;
+    width: 134px;
+    margin: 0 auto 24px;
+  }
+
+  .more-products__secondary-text {
+    font-size: 16px;
+    line-height: 18px;
+    width: 170px;
+    margin: 0 auto 78px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-products__container {
+    padding-top: 150px;
+  }
+
+  .more-products__secondary-text {
+    margin-bottom: 90px;
+  }
+}

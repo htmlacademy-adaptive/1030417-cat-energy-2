@@ -1,0 +1,238 @@
+.example {
+  background-color: $darkEA;
+  padding: 25px 0 38px;
+}
+
+.example__wrapper {
+  padding: 0 20px;
+}
+
+.example__title {
+  @include heading;
+  font-size: 36px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.example__title-wrapper {
+  display: block;
+}
+
+.example__text {
+  color: $dark4;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 20px;
+}
+
+.example__achievment-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 21px;
+}
+
+.example__achievment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example__achievment-result {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  border: 1px solid $darkCD;
+  text-align: center;
+  padding: 15px 20px;
+  position: relative;
+  border-radius: 3px;
+  width: 124px;
+}
+
+.example__achievment-label {
+  color: $dark4;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 12px;
+  display: block;
+  padding: 0 10px;
+  max-width: 87px;
+  min-height: 24px;
+  background-color: $darkEA;
+  margin: -10px 0 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.example__summary {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 20px;
+  max-width: 190px;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: transparent;
+    padding: 47px 0 0;
+  }
+
+  .example__container {
+    padding: 0;
+  }
+
+  .example__wrapper {
+    padding: 0 30px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+    padding: 0 30px;
+  }
+
+  .example__title-wrapper {
+    max-width: 400px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 55px;
+  }
+
+  .example__achievment-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+
+  .example__achievment-result {
+    min-width: 162px;
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 0;
+  }
+
+  .example__achievment-label {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $white;
+    padding: 0 8px;
+    width: max-content;
+    max-width: 142px;
+  }
+
+  .example__summary {
+    font-size: 20px;
+    padding-top: 11px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 9;
+    align-items: end;
+    margin: 0;
+  }
+
+  .example__info-block {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 74px;
+  }
+
+  .example__slider {
+    position: relative;
+    background-color: $darkEA;
+    padding-bottom: 98px;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 147px;
+      background-color: $white;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    padding: 0;
+    background-color: $darkF2;
+  }
+
+  .example__container {
+    padding: 72px 0 0;
+    margin: 0 auto;
+    max-width: 1220px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__wrapper {
+    padding: 0;
+  }
+
+  .example__title {
+    background-color: $white;
+    padding-bottom: 76px;
+    margin: 0;
+  }
+
+  .example__title-wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  .example__text {
+    width: 433px;
+    margin-bottom: 69px;
+  }
+
+  .example__info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    max-width: 374px;
+  }
+
+  .example__achievment-label {
+    background-color: $darkF2;
+  }
+
+  .example__summary {
+    flex-direction: row;
+    gap: 63px;
+    margin-bottom: 0;
+    max-width: 700px;
+  }
+
+  .example__summary-text {
+    max-width: 175px;
+  }
+
+  .example__summary-value {
+    max-width: 100px;
+  }
+
+  .example__slider {
+    background-color: unset;
+    margin-top: -206px;
+    padding: 0;
+
+    &::before {
+      z-index: -1;
+    }
+  }
+}

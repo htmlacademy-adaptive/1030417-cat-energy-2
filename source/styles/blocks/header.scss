@@ -1,5 +1,87 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.header--catalog {
+  border-bottom: 1px solid $darkD9;
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  padding: 15px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__toggle {
+  @include button-reset;
+  width: 24px;
+  height: 24px;
+  background: url("../../icons/burger.svg") 50% no-repeat;
+  background-color: transparent;
+  transform: translateY(-5px);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__toggle--opened {
+  background-image: url("../../icons/cross.svg");
+  background-size: 18px 18px;
+}
+
+.header__logo {
+  &:hover,
+  &:focus {
+    opacity: $hover;
+  }
+
+  &:active {
+    opacity: $active;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .header--catalog {
+    border-bottom: 0;
+  }
+
+  .header__container {
+    padding: 25px 34px 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header__wrapper {
+    padding: 0;
+    display: block;
+    margin: 0;
+  }
+
+  .header__text-logo,
+  .header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 55px 0 0;
+  }
 }

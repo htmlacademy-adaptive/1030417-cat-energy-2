@@ -1,0 +1,164 @@
+.program {
+  position: relative;
+  background-color: $darkF2;
+  padding: 30px 20px 18px;
+}
+
+.program--slim {
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../icons/stack.svg#cat-slim") 50% no-repeat;
+    width: 50px;
+    height: 53px;
+    top: 21px;
+    left: 20px;
+  }
+}
+
+.program--bulk {
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../icons/stack.svg#cat-muscle") 50% no-repeat;
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+  }
+}
+
+.program__title {
+  @include heading;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 37px;
+  padding-left: 70px;
+  margin-bottom: 30px;
+}
+
+.program__description {
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark4;
+  padding-bottom: 21px;
+  border-bottom: 1px solid $darkD9;
+  margin: 0;
+}
+
+.program__link {
+  @include link;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  position: relative;
+  padding-right: 49px;
+  display: inline-block;
+  padding-top: 15px;
+  max-width: 150px;
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 10px;
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    background: url("../../icons/arrow-short.svg") top left no-repeat;
+    background-size: 22px 10px;
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../../icons/arrow.svg");
+      background-size: 29px 10px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .program {
+    padding: 76px 54px 57px;
+  }
+
+  .program--slim {
+    &::before {
+      top: 81px;
+      left: auto;
+      right: 63px;
+      width: 200px;
+      height: 211px;
+    }
+  }
+
+  .program--bulk {
+    &::before {
+      top: 91px;
+      left: auto;
+      right: 26px;
+      width: 278px;
+      height: 200px;
+      z-index: 1;
+    }
+  }
+
+  .program__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .program__description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 340px;
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: 51px;
+  }
+
+  .program__link {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 57px 0 0;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    padding: 77px 52px 60px;
+  }
+
+  .program--slim {
+    &::before {
+      top: 41px;
+      left: 52px;
+      width: 100px;
+      height: 106px;
+    }
+  }
+
+  .program--bulk {
+    &::before {
+      top: 47px;
+      left: 33px;
+      width: 134px;
+      height: 100px;
+    }
+  }
+
+  .program__title {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  .program__description {
+    width: auto;
+    margin-bottom: 26px;
+  }
+}

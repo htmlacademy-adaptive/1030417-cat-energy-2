@@ -1,0 +1,131 @@
+.slider {
+  width: 280px;
+  height: 256px;
+  position: relative;
+  justify-self: center;
+  touch-action: none;
+}
+
+.slider__button {
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  border: none;
+  border-radius: 2px;
+  background-color: $dark6;
+  cursor: pointer;
+  left: 50%;
+  padding: 0;
+  z-index: 3;
+
+  &:hover,
+  &:hover::after,
+  &:focus,
+  &:focus::after {
+    background-color: $basic-green;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $basic-green;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: $green-active;
+  }
+
+  &:active::before {
+    border-color: $green-active;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.slider__button::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+  border: 2px solid $dark6;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__button::after {
+  content: "";
+  mask-image: url("../../icons/stack.svg#arrows-slider");
+  mask-size: 24px 18px;
+  mask-repeat: no-repeat;
+  width: 24px;
+  height: 18px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: $dark6;
+}
+
+.slider__image {
+  width: 280px;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  max-width: none;
+}
+
+.slider__wrapper-before {
+  width: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  overflow: hidden;
+  background-color: $darkEA;
+  pointer-events: none;
+}
+
+.slider__wrapper-after {
+  pointer-events: none;
+}
+
+
+@media (min-width: $tablet-width) {
+  .slider {
+    width: 560px;
+    height: 512px;
+  }
+
+  .slider__image {
+    width: 560px;
+  }
+
+  .slider__wrapper-before::after {
+    content: "";
+    width: 100%;
+    height: 147px;
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__wrapper-before {
+    background-color: $darkF2;
+  }
+
+  .slider__wrapper-before::after {
+    height: 134px;
+  }
+}

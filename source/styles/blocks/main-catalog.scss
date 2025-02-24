@@ -1,0 +1,35 @@
+.main-catalog__title {
+  @include heading;
+  font-size: 36px;
+  line-height: 36px;
+  padding: 27px 20px 41px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-catalog {
+    padding-top: 140px;
+  }
+
+  .main-catalog__title-container {
+    padding: 0 30px;
+  }
+
+  .main-catalog__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 0;
+    margin-bottom: 165px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-catalog {
+    padding: 188px 0 0;
+  }
+
+  .main-catalog__title-container {
+    padding: 0;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,152 @@
+.contacts {
+  background-color: $darkF2;
+  text-align: center;
+}
+
+.contacts__container {
+  padding: 40px 20px 0;
+}
+
+.contacts__logo-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts__logo {
+  display: block;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $darkD9;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__socials-list {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 0 17px;
+  gap: 22px;
+  border-bottom: 1px solid $darkD9;
+}
+
+.contacts__socials-link {
+  @include link;
+  display: block;
+  width: 27px;
+  height: 22px;
+  mask-position: 50%;
+  mask-repeat: no-repeat;
+  background-color: $dark6;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__socials-link--vk {
+  mask-image: url("../../icons/stack.svg#vk");
+  mask-size: 27px 17px;
+}
+
+.contacts__socials-link--youtube {
+  mask-image: url("../../icons/stack.svg#youtube");
+  mask-size: 24px 21px;
+}
+
+.contacts__socials-link--tg {
+  mask-image: url("../../icons/stack.svg#telegram");
+  mask-size: 20px 19px;
+}
+
+.contacts__copyright {
+  @include link;
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 40px;
+
+  &:hover,
+  &:focus {
+    .contacts__copyright-symbol {
+      fill: $basic-green;
+    }
+  }
+
+  &:active {
+    .contacts__copyright-text,
+    .contacts__copyright-logo {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__container {
+    padding: 55px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+
+  .contacts__logo-container {
+    max-width: 130px;
+    margin-right: 10px;
+  }
+
+  .contacts__logo {
+    border-bottom: 0;
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  .contacts__socials-list {
+    padding: 5px 0 0 25px;
+    border-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    max-width: 150px;
+  }
+
+  .contacts__copyright-container {
+    max-width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contacts__copyright {
+    padding: 0;
+  }
+
+  .contacts__copyright-text {
+    padding-right: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 70px 0 55px;
+  }
+}

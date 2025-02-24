@@ -1,0 +1,32 @@
+.catalog__list {
+  @include list;
+  border-bottom: 1px solid $darkD9;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__container {
+    padding: 0 30px 74px;
+  }
+
+  .catalog__list {
+    border-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 141px 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__container {
+    padding: 0;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 144px 80px;
+    margin-bottom: 69px;
+  }
+}

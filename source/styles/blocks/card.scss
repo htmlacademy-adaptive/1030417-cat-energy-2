@@ -1,0 +1,139 @@
+.card {
+  border-top: 1px solid $darkD9;
+}
+
+.card__container {
+  padding: 20px 20px 25px;
+}
+
+.card__link {
+  @include link;
+}
+
+.card__picture-block {
+  @include link;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__picture {
+  display: block;
+}
+
+.card__title {
+  @include heading;
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark2;
+  text-transform: uppercase;
+  text-align: start;
+  width: 85px;
+  margin-bottom: 14px;
+}
+
+.card__description {
+  color: $dark4;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.card__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card__parameter,
+.card__value {
+  max-width: calc(50% - 20px);
+}
+
+.card__button {
+  @include basic-button;
+  padding: 10px 20px;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .card {
+    border-top: 0;
+    background-color: $darkF2;
+  }
+
+  .card__container {
+    padding: 0 37px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .card__picture-block {
+    width: 200px;
+    height: 210px;
+    margin: -70px auto 20px;
+  }
+
+  .card__title {
+    font-size: 20px;
+    line-height: 24px;
+    width: 135px;
+    text-align: center;
+    margin: 0 auto 21px;
+  }
+
+  .card__description {
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 32px;
+  }
+
+  .card__row {
+    padding-bottom: 4px;
+    border-bottom: 1px solid $darkCD;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card {
+    width: 245px;
+    text-align: center;
+  }
+
+  .card__container {
+    padding: 0 38px 40px;
+  }
+
+  .card__picture-block {
+    width: 169px;
+    height: 210px;
+    margin-bottom: 12px;
+  }
+
+  .card__row {
+    padding-bottom: 7px;
+  }
+}
