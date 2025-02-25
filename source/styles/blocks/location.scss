@@ -25,9 +25,13 @@
 
 .location__map {
   display: block;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .location__map-wrapper {
+  display: flex;
+  flex-direction: column;
   min-height: 362px;
   background: $skyblue url("../../images/map-mobile@1x.jpg") no-repeat;
   background-size: cover;
@@ -61,11 +65,6 @@
     width: 157px;
   }
 
-  .location__map {
-    width: 100%;
-    min-height: 400px;
-  }
-
   .location__map-wrapper {
     min-height: 400px;
     background-image: url("../../images/map-tablet@1x.jpg");
@@ -90,6 +89,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     z-index: 1;
     width: 100%;
     height: 100%;

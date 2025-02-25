@@ -26,7 +26,6 @@
   padding: 0 40px 0 20px;
   display: inline-block;
   margin: 0 0 32px -20px;
-  max-width: 60%;
 }
 
 .offers__text {
@@ -67,7 +66,7 @@
   @include basic-button;
   font-size: 20px;
   line-height: 26px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   width: 100%;
 }
 

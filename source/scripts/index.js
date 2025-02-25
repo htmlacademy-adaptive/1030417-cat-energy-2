@@ -2,7 +2,7 @@
 const toggleButton = document.querySelector('.header__toggle');
 const headerNavigation = document.querySelector('.navigation');
 
-headerNavigation.classList.add('navigation--js-enabled')
+headerNavigation.classList.add('navigation--js-enabled');
 headerNavigation.classList.add('navigation--closed');
 toggleButton.classList.add('header__toggle--closed');
 
