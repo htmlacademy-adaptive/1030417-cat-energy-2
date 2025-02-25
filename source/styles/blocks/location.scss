@@ -25,7 +25,16 @@
 
 .location__map {
   display: block;
-  width: 100%;
+}
+
+.location__map-wrapper {
+  min-height: 362px;
+  background: $skyblue url("../../images/map-mobile@1x.jpg") no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/map-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -53,7 +62,17 @@
   }
 
   .location__map {
-    height: 400px;
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .location__map-wrapper {
+    min-height: 400px;
+    background-image: url("../../images/map-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map-tablet@2x.jpg");
+    }
   }
 }
 
@@ -67,13 +86,19 @@
     background-color: unset;
   }
 
-  .location__map {
+  .location__map-wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     width: 100%;
     height: 100%;
+    min-height: unset;
+    background-image: url("../../images/map-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map-desktop@2x.jpg");
+    }
   }
 
   .location__container {
@@ -84,6 +109,8 @@
     flex-wrap: wrap;
     justify-content: start;
     gap: 87px;
+    z-index: 3;
+    position: sticky;
   }
 
   .location__info {

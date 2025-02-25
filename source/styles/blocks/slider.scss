@@ -32,11 +32,11 @@
 
   &:active,
   &:active::after {
-    background-color: $green-active;
+    background-color: $green-dark;
   }
 
   &:active::before {
-    border-color: $green-active;
+    border-color: $green-dark;
   }
 
   &:disabled {

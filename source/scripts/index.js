@@ -2,10 +2,14 @@
 const toggleButton = document.querySelector('.header__toggle');
 const headerNavigation = document.querySelector('.navigation');
 
+headerNavigation.classList.add('navigation--js-enabled')
+headerNavigation.classList.add('navigation--closed');
+toggleButton.classList.add('header__toggle--closed');
+
 toggleButton.addEventListener('click', (evt) => {
   evt.preventDefault();
-  toggleButton.classList.toggle('header__toggle--opened');
-  headerNavigation.classList.toggle('navigation--opened');
+  toggleButton.classList.toggle('header__toggle--closed');
+  headerNavigation.classList.toggle('navigation--closed');
 });
 
 const slider = document.querySelector('.slider');

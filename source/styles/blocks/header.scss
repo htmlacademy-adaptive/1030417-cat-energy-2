@@ -1,3 +1,7 @@
+.header__container {
+  position: relative;
+}
+
 .header--catalog {
   border-bottom: 1px solid $darkD9;
 }
@@ -14,8 +18,9 @@
   @include button-reset;
   width: 24px;
   height: 24px;
-  background: url("../../icons/burger.svg") 50% no-repeat;
+  background: url("../../icons/cross.svg") 50% no-repeat;
   background-color: transparent;
+  background-size: 18px 18px;
   transform: translateY(-5px);
   cursor: pointer;
 
@@ -29,12 +34,13 @@
   }
 }
 
-.header__toggle--opened {
-  background-image: url("../../icons/cross.svg");
-  background-size: 18px 18px;
+.header__toggle--closed {
+  background-image: url("../../icons/burger.svg");
+  background-size: 24px 24px;
 }
 
-.header__logo {
+.header__logo,
+.header__text-logo {
   &:hover,
   &:focus {
     opacity: $hover;
