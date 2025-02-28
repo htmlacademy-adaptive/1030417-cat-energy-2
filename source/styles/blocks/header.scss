@@ -15,6 +15,7 @@
 }
 
 .header__toggle {
+  visibility: hidden;
   @include button-reset;
   width: 24px;
   height: 24px;
@@ -25,12 +26,18 @@
   cursor: pointer;
 
   &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
+    &:focus {
+      opacity: 0.6;
+    }
 
-  &:active {
-    opacity: 0.3;
+    &:active {
+      opacity: 0.3;
+    }
+}
+
+.header--js-enabled {
+  .header__toggle {
+    visibility: visible;
   }
 }
 
